@@ -1,0 +1,59 @@
+<!-- ===== NAVBAR (components/navbar.html) ===== -->
+<div class="bg-slate-900 text-white text-xs sm:text-sm">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+    <p class="truncate">Welcome to Franchise Lab. Line up a free call with our advisor just hit contact us!</p>
+    <a href="tel:+919821341339" class="hidden sm:inline font-semibold text-amber-400 hover:text-amber-300 whitespace-nowrap">+91 98213 41339</a>
+  </div>
+</div>
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
+  <nav class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center" aria-label="Franchise Lab"><img src="img/logo.png" alt="Franchise Lab" class="h-9 sm:h-11 w-auto"></a>
+    <ul class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-slate-700">
+      <li><a class="nav-link" href="about-us.html">About Us</a></li>
+      <li class="relative group">
+        <a class="nav-link inline-flex items-center gap-1" href="about-franchising.html">About Franchising
+          <svg class="w-4 h-4 transition group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-2 group-hover:translate-y-0">
+          <div class="w-56 rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 p-2">
+            <a class="drop-item" href="about-franchising.html">About Franchising</a>
+            <a class="drop-item" href="franchising-in-india.html">Franchising in India</a>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <a class="nav-link inline-flex items-center gap-1" href="index.html#services">Services
+          <svg class="w-4 h-4 transition group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-2 group-hover:translate-y-0">
+          <div class="w-72 rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 p-2">
+            <a class="drop-item" href="franchise-listings.html">Buy a Franchise</a>
+            <a class="drop-item" href="develop-your-brand-franchise.html">Develop your Brand Franchise</a>
+          </div>
+        </div>
+      </li>
+      <li><a class="nav-link" href="our-clients.html">Our Clients</a></li>
+      <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+      <li><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <button data-open-modal class="hidden sm:inline-flex btn-primary">Quick Inquiry</button>
+      <button id="menuBtn" aria-label="Menu" class="lg:hidden p-2 rounded-lg hover:bg-slate-100">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 bg-white">
+    <div class="px-4 py-4 space-y-1 text-slate-800 font-medium">
+      <a class="m-item" href="about-us.html">About Us</a>
+      <a class="m-item" href="about-franchising.html">About Franchising</a>
+      <a class="m-item pl-8 text-slate-500" href="franchising-in-india.html">Franchising in India</a>
+      <a class="m-item" href="index.html#services">Services</a>
+      <a class="m-item pl-8 text-slate-500" href="franchise-listings.html">Buy a Franchise</a>
+      <a class="m-item pl-8 text-slate-500" href="develop-your-brand-franchise.html">Develop your Brand Franchise</a>
+      <a class="m-item" href="our-clients.html">Our Clients</a>
+      <a class="m-item" href="blogs.html">Blogs</a>
+      <a class="m-item" href="contact-us.html">Contact Us</a>
+      <button data-open-modal class="btn-primary w-full mt-3">Quick Inquiry</button>
+    </div>
+  </div>
+</header>
+<!-- ===== /NAVBAR ===== -->
