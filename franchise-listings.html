@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Franchise Opportunities | Franchise Lab</title><meta name="description" content="Browse franchise opportunities across India."><meta name="robots" content="index, follow">
 <link rel="icon" href="https://franchiselab.in/wp-content/uploads/2024/04/Favicon-1-300x300.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="css/tailwind.css">
-<link rel="stylesheet" href="css/style.css"></head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/redesign.css"></head>
 <body class="bg-slate-50 text-slate-800 antialiased"><a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
 <!-- ===== NAVBAR (components/navbar.html) ===== -->
 <div class="bg-slate-900 text-white text-xs sm:text-sm">
@@ -144,4 +144,4 @@ const q=document.getElementById('q'),cs=document.querySelectorAll('#chips .chip'
 function run(){let n=0;document.querySelectorAll('.lcard').forEach(c=>{const v=+c.dataset.invest,t=c.dataset.name.includes(q.value.toLowerCase());
 const ok=f==='all'||(f==='a'&&v<10)||(f==='b'&&v>=10&&v<=20)||(f==='c'&&v>20);const show=t&&ok;c.style.display=show?'':'none';if(show)n++;c.classList.add('show')});
 document.getElementById('none').classList.toggle('hidden',n>0)}
-q.oninput=run;cs.forEach(c=>c.onclick=()=>{cs.forEach(x=>x.classList.remove('active'));c.classList.add('active');f=c.dataset.f;run()});</script><script src="js/main.js"></script><script src="js/animations.js"></script></body></html>
+q.oninput=run;cs.forEach(c=>c.onclick=()=>{cs.forEach(x=>x.classList.remove('active'));c.classList.add('active');f=c.dataset.f;run()});</script><script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/fx.js"></script></body></html>

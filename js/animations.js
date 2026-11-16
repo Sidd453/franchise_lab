@@ -98,3 +98,20 @@ document.addEventListener('DOMContentLoaded',()=>{
   const heads=document.querySelectorAll('h2.reveal');
   if(!reduce)addEventListener('scroll',()=>{heads.forEach(h=>{const r=h.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)h.style.letterSpacing=(-0.02-(r.top/innerHeight)*0.01)+'em'})},{passive:true});
 });
+
+/* ===== interactive cards: cursor spotlight + gentle 3D tilt ===== */
+(function(){
+  const sel='.card-glow,.blog-card';let hot=null;
+  function clear(c){if(!c)return;c.style.removeProperty('--rx');c.style.removeProperty('--ry')}
+  document.addEventListener('pointermove',e=>{
+    if(e.pointerType==='touch')return;
+    const c=e.target.closest&&e.target.closest(sel);
+    if(hot&&hot!==c)clear(hot);
+    hot=c;if(!c)return;
+    const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    const big=r.width>600?.4:1; /* large panels tilt less */
+    c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%');
+    c.style.setProperty('--ry',((x-.5)*8*big).toFixed(2)+'deg');c.style.setProperty('--rx',((.5-y)*6*big).toFixed(2)+'deg');
+  },{passive:true});
+  document.addEventListener('pointerleave',()=>{clear(hot);hot=null},true);
+})();

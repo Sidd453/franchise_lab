@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Franchise Lab | Franchise Consulting & Listings India</title><meta name="description" content="Franchise Lab is a franchise consulting company in India. Grow your brand through franchising or find the right franchise opportunity. Talk to us today."><meta name="robots" content="index, follow">
 <link rel="icon" href="https://franchiselab.in/wp-content/uploads/2024/04/Favicon-1-300x300.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="css/tailwind.css">
-<link rel="stylesheet" href="css/style.css"></head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/redesign.css"></head>
 <body class="bg-slate-50 text-slate-800 antialiased"><a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
 <!-- ===== NAVBAR (components/navbar.html) ===== -->
 <div class="bg-slate-900 text-white text-xs sm:text-sm">
@@ -100,6 +100,7 @@
   <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f8fafc" d="M0 80V40C240 0 480 0 720 30s480 40 720 10v40z"/></svg>
 </section>
 
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Verified partners &amp; safe deals</span><span>All-in-one franchise solution</span><span>Franchise options made for you</span><span>₹3 Lacs – ₹1 Cr+ investments</span><span>Franchise consulting &amp; listings India</span><span>Verified partners &amp; safe deals</span><span>All-in-one franchise solution</span><span>Franchise options made for you</span><span>₹3 Lacs – ₹1 Cr+ investments</span><span>Franchise consulting &amp; listings India</span></div></div>
 <!-- WHY -->
 <section id="why" class="py-20 relative">
   <div class="max-w-7xl mx-auto px-4 grid gap-6 md:grid-cols-3">
@@ -120,6 +121,9 @@
   </div>
 </section>
 
+<!-- STATEMENT BAND -->
+<div class="statement" aria-hidden="true"><div class="statement-track"><span>Buy a franchise</span><i>✦</i><span class="out">Build a brand</span><i>✦</i><span>Grow together</span><i>✦</i><span class="out">Buy a franchise</span><i>✦</i><span>Build a brand</span><i>✦</i><span class="out">Grow together</span><i>✦</i><span>Buy a franchise</span><i>✦</i><span class="out">Build a brand</span><i>✦</i><span>Grow together</span><i>✦</i><span class="out">Buy a franchise</span><i>✦</i><span>Build a brand</span><i>✦</i><span class="out">Grow together</span><i>✦</i></div></div>
+
 <!-- SERVICES -->
 <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden">
   <div class="blob w-96 h-96 bg-brand-600/40 -top-20 right-0"></div>
@@ -138,6 +142,23 @@
         <p class="mt-4 text-slate-300 leading-relaxed">Our Franchise Development Program is designed to guide aspiring entrepreneurs through every step of the franchising journey. Whether you’re looking to launch your first franchise or expand your existing portfolio.</p>
         <a href="develop-your-brand-franchise.html" class="btn-primary mt-8">Know More →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process py-24" id="process">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="reveal text-center max-w-2xl mx-auto">
+      <span class="eyebrow">How it works</span>
+      <h2 class="mt-4 text-3xl sm:text-5xl">From first call to <span class="text-gradient">grand opening</span></h2>
+    </div>
+    <div class="steps mt-16">
+      <div class="steps-line"><b></b></div>
+      <div class="step reveal"><span class="step-n">01</span><h3>Discovery call</h3><p>Tell us your budget, city and goals. We listen first.</p></div>
+      <div class="step reveal"><span class="step-n">02</span><h3>Shortlist &amp; match</h3><p>Verified brands that genuinely fit — with honest numbers.</p></div>
+      <div class="step reveal"><span class="step-n">03</span><h3>Due diligence</h3><p>Investment, area and outlets checked with our experts.</p></div>
+      <div class="step reveal"><span class="step-n">04</span><h3>Sign &amp; launch</h3><p>Agreement, setup and opening, with support throughout.</p></div>
     </div>
   </div>
 </section>
@@ -279,7 +300,7 @@ const LISTINGS=[
  ["Stand By Coffee","stand-by-coffee","77 Lacs","1000 Sqft","2"],
  ["Baccha Party","baccha-party","1.60 Cr","5000 Sqft Cpt","7"],
  ["Oye Paaji","oye-paaji","14 Lacs","200 Sqft Cpt","3"]];
-document.getElementById('listings').innerHTML=LISTINGS.map((l,i)=>`
+document.getElementById('listings').innerHTML=LISTINGS.slice(0,6).map((l,i)=>`
 <a href="listing-${l[1]}.html" class="reveal card-glow group block rounded-3xl bg-white ring-1 ring-slate-200 overflow-hidden" style="transition-delay:${(i%3)*.1}s">
   <div class="logo-box"><img src="img/brand-${l[1]}.png" alt="${l[0]}" loading="lazy"></div>
   <div class="p-6">
@@ -312,4 +333,4 @@ document.getElementById('faqs').innerHTML=FAQS.map(f=>`
     <span class="plus shrink-0 w-9 h-9 grid place-items-center rounded-full bg-brand-50 text-brand-600 text-2xl transition-transform">+</span></button>
   <div class="faq-body"><p class="px-6 pb-6 text-slate-600 leading-relaxed">${f[1]}</p></div>
 </div>`).join('');
-</script><script src="js/main.js"></script><script src="js/animations.js"></script></body></html>
+</script><script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/fx.js"></script></body></html>

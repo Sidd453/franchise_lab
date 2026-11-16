@@ -1,13 +1,9 @@
-Franchise Lab redesign
-1. EXTRACT the zip first (do not open files from inside the zip).
-2. Open index.html in Chrome/Edge. Works offline now (Tailwind is compiled into css/tailwind.css).
-   Only Google Fonts need internet (a fallback font is used otherwise).
+Franchise Lab - redesign v6.2 (editorial paper + ink + cobalt + saffron; ticket cards, statement band, process timeline, cursor, scroll motion)
+1. EXTRACT the zip, then open index.html in Chrome/Edge.
+2. NEW: css/redesign.css (design layer, palette at top) and js/fx.js (motion). Both load after the v5 files on every page.
+1. EXTRACT the zip first, then open index.html in Chrome/Edge.
+2. css/theme.css = the design layer (loaded after css/style.css). Colours are at the top (:root).
+3. Fully offline: Tailwind is compiled (css/tailwind.css) and fonts are bundled in /fonts.
 Pages: index, about-us, about-franchising, franchising-in-india, franchise-listings, develop-your-brand-franchise,
-       our-clients, blogs, contact-us, listing-<brand>.html
+       our-clients, blogs (+6 posts), contact-us, listing-<brand>.html (24 brands)
 components/: navbar.html, footer.html, modal.html
-Inner-page copy not readable from the live site is generic - replace with client text.
-Stats counters (data-count in index.html) are placeholders.
-Brand logos: img/brand-<slug>.png (shown uncropped via .logo-box in css/style.css). Oye Paaji added as a listing.
-Services > Buy a Franchise (franchise-listings.html) lists all 25 brands; each links to listing-<brand>.html.
-V2: animated hero (particles, typed headline, floating logos), logo marquee, clients grid (img/clients), motion layer in js/animations.js + css/style.css.
-Blogs: blogs.html + blog-*.html (6 articles, covers in img/blog). Contact: Google Map embed (needs internet). Articles 2-6 are draft copy written from the post titles; replace with client text.
